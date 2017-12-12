@@ -161,10 +161,10 @@ def loadNextLevel():
 	#Showing level number on dot matrix display
 	dig = str("%02d" % curLevel)
 	digitData = open("dotconnect-digits.txt", "r")
-	digitData.seek((int(dig[0]))*123+9)
+	digitData.seek((int(dig[0]))*113+8)
 	for k in range(8):
 		bitMatrix[k] = bitarray(bin=digitData.readline())
-	digitData.seek((int(dig[1]))*123+9)
+	digitData.seek((int(dig[1]))*113+8)
 	secondDigit = []
 	for k in range(8):
 		secondDigit.append(bitarray(bin=digitData.readline()))
